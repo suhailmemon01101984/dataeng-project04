@@ -1,12 +1,4 @@
 import boto3
-#s3_client=boto3.client("s3")
-# resp=s3_client.list_objects(Bucket="covid19-lake")
-# keys=[]
-# #print(resp['Contents'])
-# for obj in resp['Contents']:
-#     keys.append(obj['Key'])
-#
-# print(keys)
 
 s3=boto3.resource('s3')
 srcbucket=s3.Bucket('covid19-lake')
