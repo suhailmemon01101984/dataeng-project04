@@ -44,4 +44,169 @@ glue_client.create_crawler(
 
 )
 
+glue_client.create_crawler(
+    Name='enigma-nytimes-us-county-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='enigma-nytimes-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/enigma-nytimes-data-in-usa/csv/us_county'
+            }
+        ]
+    }
+
+)
+
+glue_client.create_crawler(
+    Name='enigma-nytimes-us-states-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='enigma-nytimes-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/enigma-nytimes-data-in-usa/csv/us_states'
+            }
+        ]
+    }
+
+)
+
+
+glue_client.create_crawler(
+    Name='rearc-covid-19-testing-states-daily-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='rearc-covid-19-testing-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/rearc-covid-19-testing-data/csv/states_daily'
+            }
+        ]
+    }
+
+)
+
+glue_client.create_crawler(
+    Name='rearc-covid-19-testing-us-daily-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='rearc-covid-19-testing-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/rearc-covid-19-testing-data/csv/us_daily'
+            }
+        ]
+    }
+
+)
+
+glue_client.create_crawler(
+    Name='rearc-covid-19-testing-us-total-latest-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='rearc-covid-19-testing-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/rearc-covid-19-testing-data/csv/us-total-latest'
+            }
+        ]
+    }
+
+)
+
+
+glue_client.create_crawler(
+    Name='rearc-usa-hospital-beds-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/rearc-usa-hospital-beds'
+            }
+        ]
+    }
+
+)
+
+glue_client.create_crawler(
+    Name='static-datasets-countrycode-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='static-datasets-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/static-datasets/csv/countrycode'
+            }
+        ]
+    }
+
+)
+
+glue_client.create_crawler(
+    Name='static-datasets-countypopulation-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='static-datasets-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/static-datasets/csv/CountyPopulation'
+            }
+        ]
+    }
+
+)
+
+
+glue_client.create_crawler(
+    Name='static-datasets-stateabv-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    TablePrefix='static-datasets-',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-covid-de-project/static-datasets/csv/state-abv'
+            }
+        ]
+    }
+
+)
+
+
 glue_client.start_crawler(Name='enigma-jhu-crawler')
+glue_client.start_crawler(Name='enigma-nytimes-us-county-crawler')
+glue_client.start_crawler(Name='enigma-nytimes-us-states-crawler')
+glue_client.start_crawler(Name='rearc-covid-19-testing-states-daily-crawler')
+glue_client.start_crawler(Name='rearc-covid-19-testing-us-daily-crawler')
+glue_client.start_crawler(Name='rearc-covid-19-testing-us-total-latest-crawler')
+glue_client.start_crawler(Name='rearc-usa-hospital-beds-crawler')
+glue_client.start_crawler(Name='static-datasets-countrycode-crawler')
+glue_client.start_crawler(Name='static-datasets-countypopulation-crawler')
+glue_client.start_crawler(Name='static-datasets-stateabv-crawler')
