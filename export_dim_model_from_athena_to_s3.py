@@ -1,4 +1,4 @@
-#2. grant the user: suhailmemon84-admin the role: AmazonAthenaFullAccess
+#1. grant the user: suhailmemon84-admin the role: AmazonAthenaFullAccess
 import awswrangler as wr
 import pandas as pd
 import s3fs
