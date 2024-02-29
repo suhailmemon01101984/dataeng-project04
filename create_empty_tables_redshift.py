@@ -24,14 +24,17 @@ cursor = conn.cursor()
 ####create empty tables
 
 cursor.execute("""\
-create table if not exists dev.public.category(
-catid integer not null,
-catgroup varchar(10),
-catname varchar(10),
-catdesc varchar(50),
-primary key(catid)
+create table if not exists dev.public.dimension_date(
+index integer not null,
+fips integer not null,
+date date not null,
+month integer not null,
+year integer not null,
+dayofweek integer not null,
+is_weekend varchar(5) not null,
+primary key(index)
 )
-distkey(catid)""")
+distkey(date)""")
 
 cursor.close()
 conn.close()
