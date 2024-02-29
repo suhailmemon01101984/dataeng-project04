@@ -16,7 +16,7 @@ conn = redshift_connector.connect(
      database='dev',
      port=5439,
      user='suhailmemon84-admin',
-     password='Jun200726'
+     password='mypwd'
   )
 conn.autocommit = True
 cursor = conn.cursor()
