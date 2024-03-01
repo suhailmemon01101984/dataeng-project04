@@ -23,6 +23,11 @@ cursor = conn.cursor()
 
 ####create empty tables
 
+cursor.execute("""drop table if exists dev.public.dimension_date""")
+cursor.execute("""drop table if exists dev.public.dimension_hospital""")
+cursor.execute("""drop table if exists dev.public.fact_covid""")
+cursor.execute("""drop table if exists dev.public.dimension_region""")
+
 cursor.execute("""\
 create table if not exists dev.public.dimension_date(
 index integer not null,
@@ -35,6 +40,59 @@ is_weekend varchar(5) not null,
 primary key(index)
 )
 distkey(date)""")
+
+
+cursor.execute("""\
+create table if not exists dev.public.dimension_hospital(
+index integer not null,
+fips integer,
+state varchar(100) not null,
+hos_lat float not null,
+hos_lang float not null,
+hq_address varchar(2000) not null,
+hospital_type varchar(200) not null,
+hospital_name varchar(1000) not null,
+hq_city varchar(100) not null,
+hq_state varchar(100) not null,
+primary key(index)
+)
+distkey(fips)""")
+
+
+cursor.execute("""\
+create table if not exists dev.public.fact_covid(
+index integer not null,
+fips integer not null,
+state varchar(100) not null,
+region varchar(100) not null,
+confirmed integer,
+death integer,
+recovered integer,
+active integer,
+positive integer,
+negative integer,
+hospitalizedcurrently integer,
+hospitalized integer,
+hospitalizeddischarged integer,
+primary key(index)
+)
+distkey(index)""")
+
+
+
+cursor.execute("""\
+create table if not exists dev.public.dimension_region(
+index integer,
+fips integer,
+state varchar(100),
+region varchar(100),
+lat float,
+lang float,
+county varchar(100),
+state_abb varchar(100),
+primary key(index)
+)
+distkey(index)""")
 
 cursor.close()
 conn.close()

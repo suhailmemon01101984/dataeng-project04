@@ -19,5 +19,20 @@ cursor.execute("truncate table dev.public.dimension_date")
 #copy command. specify region where the bucket is since bucket region is different from redshift region. also set ignoreheader to 1 to make sure it ignores the header before loading
 cursor.execute("copy dev.public.dimension_date from 's3://suhailmemon84-covid-de-project/output/dimension_date.csv' iam_role 'arn:aws:iam::236765750193:role/suhailmemon84-reshift-s3-readonly-access' REGION 'us-east-1' IGNOREHEADER 1 delimiter ',';")
 
+
+cursor.execute("truncate table dev.public.dimension_hospital")
+#copy command. specify region where the bucket is since bucket region is different from redshift region. also set ignoreheader to 1 to make sure it ignores the header before loading
+cursor.execute("copy dev.public.dimension_hospital from 's3://suhailmemon84-covid-de-project/output/dimension_hospital.csv' iam_role 'arn:aws:iam::236765750193:role/suhailmemon84-reshift-s3-readonly-access' REGION 'us-east-1' IGNOREHEADER 1 delimiter ',';")
+
+
+cursor.execute("truncate table dev.public.fact_covid")
+#copy command. specify region where the bucket is since bucket region is different from redshift region. also set ignoreheader to 1 to make sure it ignores the header before loading
+cursor.execute("copy dev.public.fact_covid from 's3://suhailmemon84-covid-de-project/output/fact_covid.csv' iam_role 'arn:aws:iam::236765750193:role/suhailmemon84-reshift-s3-readonly-access' REGION 'us-east-1' IGNOREHEADER 1 delimiter ',';")
+
+cursor.execute("truncate table dev.public.dimension_region")
+#copy command. specify region where the bucket is since bucket region is different from redshift region. also set ignoreheader to 1 to make sure it ignores the header before loading
+cursor.execute("copy dev.public.dimension_region from 's3://suhailmemon84-covid-de-project/output/dimension_region.csv' iam_role 'arn:aws:iam::236765750193:role/suhailmemon84-reshift-s3-readonly-access' REGION 'us-east-1' IGNOREHEADER 1 delimiter ',';")
+
+
 cursor.close()
 conn.close()
