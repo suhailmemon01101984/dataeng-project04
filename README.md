@@ -3,7 +3,7 @@ load and analyze covid-19 data
 
 1. load files to s3
 2. crawl the data files using glue and analyze using athena
-3. create dimension model and load data back to s3
+3. create dimension model and use glue to export data back to s3
 4. load the dimension model tables to redshift
 
 ref links :
