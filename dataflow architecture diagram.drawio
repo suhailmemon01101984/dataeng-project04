@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2024-03-10T21:22:45.731Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="FV0NQ2dzTK_PVL7B8nGx" version="23.1.7" type="device">
+  <diagram name="Page-1" id="Nu3vyeRSzUsropt1BBd4">
+    <mxGraphModel dx="1242" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JY-ATsxwmUvx_VuuNqa_-1" target="JY-ATsxwmUvx_VuuNqa_-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-1" value="S3" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="20" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JY-ATsxwmUvx_VuuNqa_-4" target="JY-ATsxwmUvx_VuuNqa_-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-4" value="ATHENA" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JY-ATsxwmUvx_VuuNqa_-6" target="JY-ATsxwmUvx_VuuNqa_-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-6" value="S3" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="563" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-8" value="REDSHIFT" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="843" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JY-ATsxwmUvx_VuuNqa_-11" target="JY-ATsxwmUvx_VuuNqa_-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-11" value="GLUE CRAWLER" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JY-ATsxwmUvx_VuuNqa_-15" target="JY-ATsxwmUvx_VuuNqa_-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-15" value="GLUE ETL PYTHON JOB" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="693" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JY-ATsxwmUvx_VuuNqa_-18" target="JY-ATsxwmUvx_VuuNqa_-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JY-ATsxwmUvx_VuuNqa_-18" value="EXPORT DIMENSION MODEL JOB" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
