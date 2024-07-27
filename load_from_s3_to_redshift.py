@@ -6,7 +6,7 @@
 
 import redshift_connector
 conn = redshift_connector.connect(
-     host='default-workgroup.236765750193.us-west-1.redshift-serverless.amazonaws.com',
+     host='default-workgroup.236765750193.us-west-2.redshift-serverless.amazonaws.com',
      database='dev',
      port=5439,
      user='suhailmemon84-admin',
